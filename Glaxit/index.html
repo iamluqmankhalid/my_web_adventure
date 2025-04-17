@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Arial", sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background: #1a2a44;
+      padding: 1rem;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 0 1.5rem;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+      position: relative;
+    }
+
+    nav ul li a:hover {
+      color: #00aaff;
+    }
+
+    nav ul li a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #00aaff;
+      left: 0;
+      bottom: -5px;
+      transition: width 0.3s;
+    }
+
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem;
+
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    section h1,
+    section h2,
+    section h3 {
+      color: #1a2a44;
+      margin-bottom: 1rem;
+    }
+
+    section h1 {
+      font-size: 2.5rem;
+      text-align: center;
+    }
+
+    section h2,
+    section h3 {
+      font-size: 1.8rem;
+      border-bottom: 2px solid #00aaff;
+      display: inline-block;
+    }
+
+    section h3 {
+      font-size: 1.5rem;
+    }
+
+    section p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    #home {
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    #skills ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      list-style: none;
+      justify-content: center;
+    }
+
+    #skills ul li {
+      background: #e0e7ff;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      color: #1a2a44;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    #skills ul li:hover {
+      transform: scale(1.05);
+    }
+
+    #skills ul li:nth-child(1):hover {
+      background: #ff6f61;
+    }
+
+    #skills ul li:nth-child(2):hover {
+      background: #34d399;
+    }
+
+    #skills ul li:nth-child(3):hover {
+      background: #facc15;
+    }
+
+    #skills ul li:nth-child(4):hover {
+      background: #a855f7;
+    }
+
+    #contact p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    #contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 500px;
+    }
+
+    #contact label {
+      font-size: 1rem;
+      color: #1a2a44;
+    }
+
+    #contact input,
+    #contact textarea {
+      padding: 0.5rem;
+      border: 2px solid;
+      border-radius: 5px;
+      font-size: 1rem;
+      width: 100%;
+    }
+
+    #contact input[name="name"] {
+      border-color: #ff6f61;
+    }
+
+    #contact input[name="email"] {
+      border-color: #6b7280;
+    }
+
+    #contact textarea[name="message"] {
+      border-color: #34d399;
+    }
+
+    #contact textarea {
+      resize: vertical;
+    }
+
+    #contact button {
+      background: #00aaff;
+      color: #fff;
+      border: none;
+      padding: 0.75rem;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    #contact button:hover {
+      background: #0088cc;
+    }
+
+    footer {
+      background: #1a2a44;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      nav ul li {
+        margin: 0.5rem 0;
+      }
+
+      main {
+        padding: 1rem;
+      }
+
+      section h1 {
+        font-size: 2rem;
+      }
+
+      section h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Website</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home">
+      <h1>Welcome to My Portfolio</h1>
+      <p>Hi, I am Luqman, a web development intern.</p>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I am Luqman, a beginner web developer learning to create websites. As
+        an intern, I am learning HTML from W3Schools and Youtube.
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>C++</li>
+        <li>OOP</li>
+        <li>HTML</li>
+        <li>Content Writing</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>Phone: 0306-5133195</p>
+      <h3>Get in Touch</h3>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 My Portfolio. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
