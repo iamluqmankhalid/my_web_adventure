@@ -1,0 +1,338 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background-color: #F4F4F4;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #1B263B;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 2rem;
+            transition: background-color 0.3s;
+        }
+
+        header:hover {
+            background-color: #2A3B5A;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 1.2rem;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 0.6rem 1.2rem;
+            background-color: #0A9396;
+            color: #FFFFFF;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .nav-button:hover {
+            background-color: #005F73;
+            text-decoration: underline;
+            transform: scale(1.05);
+        }
+
+        /* Profile Image */
+        .profile-img {
+            display: block;
+            margin: 1rem auto;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #0A9396;
+            object-fit: cover;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.1);
+            border-color: #005F73;
+        }
+
+        /* Sections */
+        section {
+            margin: 0;
+            padding: 2rem 0;
+            transition: background-color 0.3s;
+        }
+
+        .section-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Home Section */
+        #home {
+            background-color: #E6F3F3;
+        }
+
+        #home:hover {
+            background-color: #D0E8E8;
+        }
+
+        /* About Section */
+        #about {
+            background-color: #E6F0FA;
+        }
+
+        #about:hover {
+            background-color: #D1E3F6;
+        }
+
+        /* Skills Section */
+        #skills {
+            background-color: #E9F7EF;
+        }
+
+        #skills:hover {
+            background-color: #D4F0E0;
+        }
+
+        /* Projects Section */
+        #projects {
+            background-color: #FEF9E7;
+        }
+
+        #projects:hover {
+            background-color: #F9F1D0;
+        }
+
+        /* Achievements Section */
+        #achievements {
+            background-color: #FCEDEA;
+        }
+
+        #achievements:hover {
+            background-color: #F7DCD6;
+        }
+
+        h2 {
+            color: #1B263B;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        section p {
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style: square;
+            padding-left: 1.5rem;
+        }
+
+        ul li {
+            margin-bottom: 0.6rem;
+            padding: 0.5rem;
+            transition: background-color 0.3s;
+        }
+
+        ul li:hover {
+            background-color: #E0F2F1;
+        }
+
+        /* Projects */
+        .project {
+            background-color: #FFFFFF;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .project:hover {
+            background-color: #F5F5F5;
+        }
+
+        .project h3 {
+            color: #0A9396;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1B263B;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            transition: background-color 0.3s;
+        }
+
+        footer:hover {
+            background-color: #2A3B5A;
+        }
+
+        footer a {
+            color: #0A9396;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 900px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                gap: 0.8rem;
+            }
+
+            section {
+                padding: 1.5rem 0;
+            }
+
+            .section-content {
+                padding: 0 0.5rem;
+            }
+
+            .profile-img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+                padding: 0.5rem;
+            }
+
+            section {
+                padding: 1rem 0;
+            }
+
+            header h1 {
+                font-size: 1.6rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            .profile-img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+    <title>Luqman Khalid - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Luqman Khalid</h1>
+        <nav>
+            <ul>
+                <li><a href="#home" class="nav-button">Home</a></li>
+                <li><a href="#about" class="nav-button">About</a></li>
+                <li><a href="#skills" class="nav-button">Skills</a></li>
+                <li><a href="#projects" class="nav-button">Projects</a></li>
+                <li><a href="#achievements" class="nav-button">Achievements</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="section-content">
+            <img src="images/luqman.jpg" alt="Luqman Khalid Profile Photo" class="profile-img">
+            <h2>Welcome to My Portfolio</h2>
+            <p>I'm Luqman Khalid, a BS-AI student at PAF-IAST, passionate about programming and transitioning to
+                full-stack web development at Glaxit.</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="section-content">
+            <h2>About Me</h2>
+            <p>I'm a second-semester BS Artificial Intelligence student at Pak-Austria Fachhochschule Institute of
+                Applied Sciences and Technology (PAF-IAST) in Haripur, Mang, Pakistan. As an intern at Glaxit, I'm
+                learning HTML, CSS, and JavaScript to build modern web applications.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="section-content">
+            <h2>Skills</h2>
+            <ul>
+                <li>C++ Programming</li>
+                <li>Object-Oriented Programming (OOP)</li>
+                <li>WordPress (Website Creation & Management)</li>
+                <li>PowerPoint Presentation Design</li>
+                <li>MS Word</li>
+                <li>Content Writing</li>
+                <li>Blog Writing</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="section-content">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Tic-Tac-Toe Game</h3>
+                <p>Developed a console-based Tic-Tac-Toe game in C++ during my first semester, implementing game logic
+                    and user interaction using OOP principles.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements">
+        <div class="section-content">
+            <h2>Achievements</h2>
+            <ul>
+                <li>Built a Tic-Tac-Toe game in C++ during my first semester, showcasing programming and problem-solving
+                    skills.</li>
+                <li>Completed a WordPress workshop, gaining practical experience in creating and managing websites.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Luqman Khalid. Built with HTML and CSS. <a href="https://github.com/iamluqmankhalid">GitHub</a></p>
+    </footer>
+</body>
+
+</html>
