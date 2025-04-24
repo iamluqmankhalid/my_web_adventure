@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyBlogs - Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Header -->
+    <header class="bg-green-600 text-white p-4 shadow-md">
+        <div class="max-w-5xl mx-auto flex flex-col sm:flex-row justify-between items-center">
+            <h1 class="text-2xl sm:text-3xl font-bold">MyBlogs</h1>
+            <nav>
+                <ul class="flex flex-wrap gap-4 mt-2 sm:mt-0 list-none">
+                    <li><a href="#home" class="hover:bg-green-700 px-3 py-2 rounded-md text-white">Home</a></li>
+                    <li><a href="#blog" class="hover:bg-green-700 px-3 py-2 rounded-md text-white">Blog</a></li>
+                    <li><a href="#about" class="hover:bg-green-700 px-3 py-2 rounded-md text-white">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-green-500 text-white text-center py-10">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4">Welcome to MyBlogs</h2>
+            <p class="text-lg sm:text-xl">Discover insights on coding, AI, and web development.</p>
+        </div>
+    </section>
+
+    <!-- Blog Posts Section -->
+    <section id="blog" class="py-8">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 text-center">Latest Posts</h2>
+            <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+                <!-- Post 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Why Learn Python?</h3>
+                    <p class="text-gray-600 mb-4">Python is easy to learn and great for AI and web development.</p>
+                    <a href="#" class="text-green-500 hover:text-green-700 hover:underline">Read More</a>
+                </div>
+                <!-- Post 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">CSS Tips for Beginners</h3>
+                    <p class="text-gray-600 mb-4">Master Flexbox and Grid to create stunning layouts.</p>
+                    <a href="#" class="text-green-500 hover:text-green-700 hover:underline">Read More</a>
+                </div>
+                <!-- Post 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">What is AI?</h3>
+                    <p class="text-gray-600 mb-4">Explore how artificial intelligence is changing the world.</p>
+                    <a href="#" class="text-green-500 hover:text-green-700 hover:underline">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-gray-200 py-8">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 text-center">About Tech Bits</h2>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <p class="text-gray-600">MyBlogs is a blog for beginners to learn about programming, AI, and web development. Join us to explore tips, tutorials, and tech trends!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-green-600 text-white text-center p-4">
+        <p>© 2025 MyBlogs. Built with Tailwind CSS.</p>
+    </footer>
+</body>
+</html>
