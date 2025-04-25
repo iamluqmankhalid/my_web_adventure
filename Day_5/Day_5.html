@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #1A2A44;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: #0F1C33;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            color: #00C4B4;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            list-style: none;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .nav-button {
+            background: linear-gradient(45deg, #00C4B4, #1A2A44);
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #fff;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .nav-button:hover {
+            background: linear-gradient(45deg, #FF6F61, #FFD700);
+            transform: translateY(-3px);
+            color: #000000;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            gap: 2rem;
+        }
+
+        .left-column {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+
+        .right-column {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .full-width {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 4px solid #00C4B4;
+            margin-bottom: 1.5rem;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.1);
+        }
+
+        .contact-box {
+            background: linear-gradient(45deg, #00C4B4, #1A2A44);
+            color: #fff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            margin-bottom: 2rem;
+            transition: transform 0.3s, background 0.5s;
+            border: 1px solid #00C4B4;
+        }
+
+        .contact-box:hover {
+            transform: translateY(-5px);
+            background: linear-gradient(45deg, #FF6F61, #FFD700);
+        }
+
+        .contact-box p {
+            margin-bottom: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .contact-box a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-box:hover p,
+        .contact-box:hover a {
+            color: #000000;
+        }
+
+        .contact-box a:hover {
+            color: #FFD700;
+        }
+
+        .section-box {
+            background: linear-gradient(45deg, #00C4B4, #1A2A44);
+            border: 1px solid #00C4B4;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, background 0.5s, box-shadow 0.5s;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+            background: linear-gradient(45deg, #FF6F61, #FFD700);
+        }
+
+        #about { animation-delay: 0.2s; }
+        #education { animation-delay: 0.4s; }
+        #skills { animation-delay: 0.6s; }
+        #projects { animation-delay: 0.8s; }
+        #achievements { animation-delay: 1s; }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 1rem;
+            transition: color 0.3s;
+        }
+
+        p, li {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        .section-box:hover h2,
+        .section-box:hover p,
+        .section-box:hover li {
+            color: #000000;
+        }
+
+        ul {
+            padding-left: 1.2rem;
+            text-align: left;
+        }
+
+        ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        footer {
+            background: #0F1C33;
+            padding: 2rem 1rem;
+            text-align: center;
+            color: #fff;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #00C4B4;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #FFD700;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#home" class="nav-button">Home</a></li>
+                <li><a href="#about" class="nav-button">About</a></li>
+                <li><a href="#skills" class="nav-button">Skills</a></li>
+                <li><a href="#projects" class="nav-button">Projects</a></li>
+                <li><a href="#achievements" class="nav-button">Achievements</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="left-column">
+            <img src="images/LK.jpg" alt="Luqman Khalid" class="profile-img" />
+            <div class="contact-box">
+                <p><strong>Luqman Khalid</strong></p>
+                <p>BS-AI Student, PAF-IAST</p>
+                <p>Intern at Glaxit</p>
+                <p>Email: <a href="mailto:https://mail.google.com/mail/u/0/#inbox">luqmankhalid2006@gmail.com</a></p>
+                <p>GitHub: <a href="https://github.com/iamluqmankhalid">iamluqmankhalid</a></p>
+            </div>
+        </div>
+        <div class="right-column">
+            <div class="section-box" id="home">
+                <h2>Welcome to My Portfolio</h2>
+                <p>
+                    I'm Luqman Khalid, a BS-AI student at PAF-IAST, passionate about programming and transitioning to
+                    full-stack web development at Glaxit.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="full-width">
+        <div class="section-box" id="about">
+            <h2>About Me</h2>
+            <ul>
+                <li>Second-semester BS Artificial Intelligence student at Pak-Austria Fachhochschule Institute of Applied Sciences and Technology (PAF-IAST) in Haripur, Mang, Pakistan.</li>
+                <li>Intern at Glaxit, learning HTML, CSS, and JavaScript to build modern web applications.</li>
+            </ul>
+        </div>
+
+        <div class="section-box" id="education">
+            <h2>Education</h2>
+            <ul>
+                <li>BS in Artificial Intelligence</li>
+                <li>Pak-Austria Fachhochschule Institute of Applied Sciences and Technology (PAF-IAST)</li>
+                <li>Haripur, Mang, Pakistan</li>
+                <li>2023 - Present</li>
+            </ul>
+        </div>
+
+        <div class="section-box" id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>C++ Programming</li>
+                <li>Object-Oriented Programming (OOP)</li>
+                <li>WordPress (Website Creation & Management)</li>
+                <li>PowerPoint Presentation Design</li>
+                <li>MS Word</li>
+                <li>Content Writing</li>
+                <li>Blog Writing</li>
+            </ul>
+        </div>
+
+        <div class="section-box" id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li><strong>Tic-Tac-Toe Game</strong>: Developed a console-based Tic-Tac-Toe game in C++ during my first semester, implementing game logic and user interaction using OOP principles.</li>
+            </ul>
+        </div>
+
+        <div class="section-box" id="achievements">
+            <h2>Achievements</h2>
+            <ul>
+                <li>Built a Tic-Tac-Toe game in C++ during my first semester, showcasing programming and problem-solving skills.</li>
+                <li>Completed a WordPress workshop, gaining practical experience in creating and managing websites.</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>
+            © 2025 Luqman Khalid. Built with 💖 using HTML & CSS.<br>
+            <a href="https://github.com/iamluqmankhalid">Visit my GitHub</a>
+        </p>
+    </footer>
+</body>
+</html>
